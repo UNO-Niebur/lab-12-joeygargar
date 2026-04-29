@@ -1,6 +1,6 @@
 # SearchSortLab.py
-# Name:
-# Date:
+# Name:Mia Garcia
+# Date:4/28/26
 # Assignment: Lab 13 – Searching and Sorting
 
 
@@ -8,6 +8,9 @@ def linearSearch(data, target):
     """Return the index of target if found, otherwise return -1."""
     
     # TODO: implement linear search
+    for i in range(len(data)):
+        if data[i] == target:
+            return i
     
     return -1
 
@@ -16,8 +19,15 @@ def bubbleSort(data):
     """Sort the list using bubble sort and return the sorted list."""
     
     # TODO: implement bubble sort
+    n = len(data)
+
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if data[j] > data[j + 1]:
+                data[j], data[j + 1] = data[j + 1], data[j]
     
     return data
+
 
 
 def main():
